@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">document.addEventListener('DOMContentLoaded', function () {
   const $blogName = document.getElementById('site-name')
   let blogNameWidth = $blogName && $blogName.offsetWidth
   const $menusEle = document.querySelector('#menus .menus_items')

@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">window.addEventListener('load', () => {
   let loadFlag = false
   const openSearch = function () {
     document.body.style.cssText = 'width: 100%;overflow: hidden'

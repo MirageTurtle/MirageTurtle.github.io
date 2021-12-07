@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+<link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">/* eslint-disable no-undef */
 document.addEventListener('DOMContentLoaded', function () {
   const translate = GLOBAL_CONFIG.translate
   const snackbarData = GLOBAL_CONFIG.Snackbar
