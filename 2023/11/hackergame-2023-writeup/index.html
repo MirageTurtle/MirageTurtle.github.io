@@ -9,29 +9,29 @@
   
   
   
-  <title>HackerGame 2023</title>
-  <meta name="description" content="My Hackergame 2023.">
+  <title>HackerGame 2023 Writeup</title>
+  <meta name="description" content="My Hackergame 2023 Writeup.">
   
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2023/11/hackergame2023-writeup/">
+  <link rel="canonical" href="https://mirageturtle.github.io/2023/11/hackergame-2023-writeup/">
   
   
-  <link rel="alternate" type="application/rss+xml" title="MirageTurtle&#39;s blog" href="http://localhost:4000/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="MirageTurtle&#39;s blog" href="https://mirageturtle.github.io/feed.xml">
 
   
 
   
-  <meta property="og:title" content="HackerGame 2023">
+  <meta property="og:title" content="HackerGame 2023 Writeup">
   <meta property="og:site_name" content="MirageTurtle&#39;s blog">
-  <meta property="og:url" content="http://localhost:4000/2023/11/hackergame2023-writeup/">
-  <meta property="og:description" content="My Hackergame 2023.">
+  <meta property="og:url" content="https://mirageturtle.github.io/2023/11/hackergame-2023-writeup/">
+  <meta property="og:description" content="My Hackergame 2023 Writeup.">
   
   
   <meta name="twitter:card" content="summary">
   
-  <meta name="twitter:title" content="HackerGame 2023">
-  <meta name="twitter:description" content="My Hackergame 2023.">
+  <meta name="twitter:title" content="HackerGame 2023 Writeup">
+  <meta name="twitter:description" content="My Hackergame 2023 Writeup.">
   
   
 
@@ -73,7 +73,7 @@
 
   <header class="post-header">
     
-      <h1 class="post-title" itemprop="name headline">HackerGame 2023</h1>
+      <h1 class="post-title" itemprop="name headline">HackerGame 2023 Writeup</h1>
     
     <p class="post-meta"><time datetime="2023-11-05T11:30:00+08:00" itemprop="datePublished">Nov 5, 2023</time> •
   
@@ -115,13 +115,13 @@
 
 <ol>
   <li>想要借阅世界图书出版公司出版的《A Classical Introduction To Modern Number Theory 2nd ed.》，应当前往中国科学技术大学西区图书馆的哪一层？（30 分）
-这个题去<a href="lib.ustc.edu.cn">中国科大图书馆</a>查询书名（可能需要考虑把版本号去掉），会发现这本书藏在外文书库，此时直接Google”西区外文书库”（可能因为需要考虑加上中国科大相关关键词），会发现<a href="https://lib.ustc.edu.cn/hour/">开放时间</a>中有提到西区外文书库在12楼。</li>
+这个题去<a href="https://lib.ustc.edu.cn">中国科大图书馆</a>查询书名（可能需要考虑把版本号去掉），会发现这本书藏在外文书库，此时直接Google”西区外文书库”（可能需要考虑加上中国科大相关关键词），会发现<a href="https://lib.ustc.edu.cn/hour/">开放时间</a>中有提到西区外文书库在12楼。</li>
   <li>今年 arXiv 网站的天体物理版块上有人发表了一篇关于「可观测宇宙中的鸡的密度上限」的论文，请问论文中作者计算出的鸡密度函数的上限为 10 的多少次方每立方秒差距？（30 分）
 直接Google”可观测宇宙中的鸡的密度上限”，可以找到<a href="https://www.zhihu.com/question/20337132/answer/3023506910">一篇相关知乎</a>，可以直接找到答案为10的23次方。</li>
   <li>为了支持 TCP BBR 拥塞控制算法，在编译 Linux 内核时应该配置好哪一条内核选项？（20 分）
-这个题我直接问了GPT4，因为我认为这个问题很适合它（不太能说出来原因）。</li>
+这个题我直接问了GPT4，因为我认为这个问题很适合它（不太能说出来原因）。答案是<code class="language-plaintext highlighter-rouge">CONFIG_TCP_CONG_BBR</code>。</li>
   <li>🥒🥒🥒：「我……从没觉得写类型标注有意思过」。在一篇论文中，作者给出了能够让 Python 的类型检查器 MyPY mypy 陷入死循环的代码，并证明 Python 的类型检查和停机问题一样困难。请问这篇论文发表在今年的哪个学术会议上？（20 分）
-这个小问就是做出来整个题目的关键了，因为涉及到比较新的东西。我的思路是先找论文，就可以搜到相关会议的网站。虽然后来我找到了，但由于我不太了解某些会议，导致我不太确定是否是其官方，最后是通过论文中的信息确定的。我Google的关键词是”mypy infinite loop paper”，这个时候已经找到论文<a href="https://drops.dagstuhl.de/opus/volltexte/2023/18237/pdf/LIPIcs-ECOOP-2023-44.pdf">Python Type Hints Are Turing Complete - DROPS</a>了。但由于太着急，我就直接提交了DROPS上去，结果发现不对。后来又加了”halting problem”、”filetype:pdf”的关键词，最后确定就是这篇文章，最后再文章的Abstract部分以及会议logo中得到了会议缩写ECOOP。</li>
+我的思路是先找论文，就可以搜到相关会议的网站。Google搜索”mypy infinite loop paper”，这个时候已经找到论文<a href="https://drops.dagstuhl.de/opus/volltexte/2023/18237/pdf/LIPIcs-ECOOP-2023-44.pdf">Python Type Hints Are Turing Complete - DROPS</a>了。但由于太着急，我就直接提交了DROPS上去，结果发现不对。后来又加了”halting problem”、”filetype:pdf”的关键词，最后确定就是这篇文章，最后再文章的Abstract部分以及会议logo中得到了会议缩写ECOOP。</li>
 </ol>
 
 <h2 id="更深更暗">更深更暗</h2>
@@ -162,12 +162,12 @@
 <ol>
   <li>注意到在拉面馆的合照中，学长带了STATPHYS28会议的的参会牌，可以猜测当天是会议的其中一天，也就是08-07到08-11中的一天。由于每两问对应一个flag，我们可以确定第二问答案之后进行遍历，最后得到是2023-08-10。</li>
   <li>直接Google可以知道是诺贝尔奖（好像是物理学奖？不太清楚每个类型的奖牌是否一样），直接去东京大学（因为STATPHYS28是在东京大学举办的）的Wikipedia查看知名校友，可以找到题目所指的得主是<a href="https://en.wikipedia.org/wiki/Takaaki_Kajita">Takaaki Kajita</a>，可以看到2015年获得诺贝尔物理学奖，此时他在ICRR担任director。</li>
-  <li>这一问我是做的（准确来说是最后获取到打开局面的信息的，我以为我第四问找到答案了实际上并没有），关键在于找到题目中的”帐篷中活动”是什么，我也确实找了很久。从Google Map上很容易可以看到这里是上野公园，官方名称上野恩赐公园。
+  <li>这一问我是做的最后一题（准确来说是最后获取到打开局面的信息的，我以为我第四问找到答案了实际上并没有），关键在于找到题目中的”帐篷中活动”是什么，我也确实找了很久。从Google Map上很容易可以看到这里是上野公园，官方名称上野恩赐公园。
     <ul>
       <li>我先是找到了某个东京都官方的网站，可惜上面不展示历史活动信息（不知道为什么我当时的浏览记录没有保存下来，很可惜不能展示更详细的搜索思路），但是我从那个网站找到了广场的官方名称为喷水广场。</li>
-      <li>考虑到活动会提前通知，同时又需要招募志愿者，所以我在Google上搜索相关关键词时限制了搜索时间范围，最开始从7月到9月，不断缩小范围，最后我发现搜索到了很多具体的活动，但是都不包含8月10日这一天，于是我决定加上一个关键词”8月”，最后在搜索到<a href="https://www.uenopark.info/2023/ume-shu-2023/">一个网站</a>，说明08月10日到08月13日会举办全国梅酒节。</li>
+      <li>考虑到活动会提前通知，同时又需要招募志愿者，所以我在Google上搜索相关关键词时限制了搜索时间范围，最开始从7月到9月，不断缩小范围，最后我发现搜索到了很多具体的活动，但是都不包含8月10日这一天，于是我决定加上一个关键词”8月”，最后在搜索到<a href="https://www.uenopark.info/2023/ume-shu-2023/">一个网站</a>，上面说明08月10日到08月13日会举办全国梅酒节。</li>
       <li>最后搜索”东京全国梅酒节”，可以搜索到<a href="https://umeshu-matsuri.jp/tokyo_ueno">其官方网站</a>，其中可以找到<a href="https://umeshu-matsuri.jp/tokyo_staff/">招募志愿者的链接</a>，打开可以看到问卷的链接为<a href="https://ws.formzu.net/dist/S495584522/">https://ws.formzu.net/dist/S495584522/</a>，答案显而易见。</li>
-      <li>有点可惜的地方在于没有很快找到<a href="https://www.uenopark.info">那个记录上野公园活动信息的网站</a>，浪费了不少时间。</li>
+      <li>有点可惜的地方在于没有很快找到<a href="https://www.uenopark.info">那个记录上野公园活动信息的网站</a>，浪费了不少时间，这里留个链接来帮助上野的朋友们节省时间（笑</li>
     </ul>
   </li>
   <li>这题我以为我很快定位到了答案结果并没有。在Google Map上可以看到上野公园喷水广场附近有两个博物馆：东京国立博物馆和国立科学博物馆，不确定的话把这两个博物馆的所有门票价格都试一遍即可，最后发现是0元。
@@ -177,10 +177,10 @@
   </li>
   <li>题目中提到了晚上要乘船（事实上我忘记这条信息了，只考虑了晚上），可以在<a href="https://statphys28.org/">STATPHYS28的官网</a>找到<a href="https://statphys28.org/programtt.html">议程</a>，观察到08月10日晚上是Banquet，直接在Events中找到<a href="https://statphys28.org/banquet.html">Banquet</a>，可以找到Meeting Point在Yasuda Auditorium，Google翻译得到安田讲堂。
     <ul>
-      <li>我看到有一些选手赛后讨论说他得到的翻译是安田礼堂，我觉得有点可惜吧。组委会方面，我没有想清楚为什么要求中文答案，其实直接提交英文也是OK的；选手方面，如果去Wikipedia看一下，可以看到中文是安田讲堂，但我也不确定是不是官方中文名称就是了😂，其实如果看日语（安田講堂）的话，也可以很明显看到时安田讲堂。</li>
+      <li>我看到有一些选手赛后讨论说他得到的翻译是安田礼堂，我觉得有点可惜吧。组委会方面，我没有想清楚为什么要求中文答案，其实直接提交英文也是OK的；选手方面，如果去Wikipedia看一下，可以看到中文是安田讲堂，但我也不确定是不是官方中文名称就是了😂，其实如果看日语（安田講堂）的话，也可以很明显看到是安田讲堂。</li>
     </ul>
   </li>
-  <li>直接在Twitter上搜索活动名，可以看到<a href="https://twitter.com/panda_life/status/1688436626895331328">相关的推文</a>，可以看到是A答案是熊猫。对于B，我直接Google”上野駅 3d動物”，查看图片，发现<a href="https://wow-japan.com/news-flash-shibuya-3d-akida-dog-ads/">一篇推文</a>，可以看到涩谷站出口广告牌会有3D秋田犬。
+  <li>直接在Twitter上搜索活动名，可以看到<a href="https://twitter.com/panda_life/status/1688436626895331328">相关的推文</a>，可以看到是A答案是熊猫。对于B，我直接Google”上野駅 3d動物”，查看图片，发现<a href="https://wow-japan.com/news-flash-shibuya-3d-akida-dog-ads/">一篇文章</a>，可以看到涩谷站出口广告牌会有3D秋田犬。
     <ul>
       <li>事实上我还搜索到了新宿的3D的猫，忘了品种了，好像也是三个字，都试一遍就好了。</li>
       <li>按照官方Writeup，应该是可以推出来出口站是涩谷站的（实际上我是按照上野站做的，乐），但可惜不是立本人。</li>
@@ -200,7 +200,7 @@
 
 <h2 id="奶奶的睡前flag故事">奶奶的睡前flag故事</h2>
 
-<p>我的奶奶为什么不告诉我谷歌亲儿子是Pixel！我一直是当作Nexus去搜索，最后什么也没搜到。</p>
+<p>我的奶奶为什么不告诉我谷歌亲儿子是Pixel！我一直是当作Nexus去搜索，最后什么也没搜到，甚至还自己修了半天的PNG。</p>
 
 <p>这个题顺着”谷歌”、”Pixel”、”截图”（写Writeup的时候才发现官方给了截图的Hint，我还是自己猜的，可惜了）等关键字就可以搜到Google Pixel今年三月份被爆出来的漏洞Acropalypse，最后找到<a href="https://acropalypse.app/">相关的利用工具</a>，因为题目所给图片的宽像素为1080，所以猜测Pixel 7（或者自己Custom也行），可以恢复出来下半部分截图，拿到flag。</p>
 
@@ -246,7 +246,7 @@ print(resp.text)
 
 <h2 id="虫">虫</h2>
 
-<p>这道题我过了很久才做出来，因为题目Hint是”通过无线信道传输图片的方式”，我没有直接Google到什么东西，所以一直在考虑利用FFT之类的变换将正弦波转换成方波或其他东西来表示0和1，从而恢复图片。之后看到做出来的人越来越多，我决定再看看，这次注意到题目中有提到”接受来自国际空间站（ISS）的图片”，于是通过”ISS”这个关键词检索到了SSTV。</p>
+<p>这道题我过了很久才做出来（毕竟CTF新手），因为题目Hint是”通过无线信道传输图片的方式”，我没有直接Google到什么东西，所以一直在考虑利用FFT之类的变换将正弦波转换成方波或其他东西来表示0和1，从而恢复图片。之后看到做出来的人越来越多，我决定再看看，这次注意到题目中有提到”接受来自国际空间站（ISS）的图片”，于是通过”ISS”这个关键词检索到了SSTV。</p>
 
 <p>知道是SSTV之后，就可以发现CTF中还是有不少Misc题目跟SSTV有关，也推荐了一些相关软件，可惜我是Mac，很多软件用不了，找到的也是付费的，最后在GitHub上找到一个<a href="https://github.com/colaclanth/sstv">小项目</a>，直接运行Decode就可以得到包含flag的图片。</p>
 
@@ -336,7 +336,7 @@ cod_dict += ['ty9kxborszstgguyd?!blm-p']
 
 <h2 id="-高频率星球">🪐 高频率星球</h2>
 
-<p>题目提供了<code class="language-plaintext highlighter-rouge">asciinema</code>录制的文件，我们可以直接使用<code class="language-plaintext highlighter-rouge">asciinema cat asciinema_restore.rec &gt; flag.js</code>导出所有的终端信息，最后将前后无用信息删除，利用编辑器replace的功能将控制字符删除即可得到原js文件。</p>
+<p>题目提供了<code class="language-plaintext highlighter-rouge">asciinema</code>录制的文件，可以直接使用<code class="language-plaintext highlighter-rouge">asciinema cat asciinema_restore.rec &gt; flag.js</code>导出所有的终端信息，最后将前后无用信息删除，利用编辑器replace的功能将控制字符删除即可得到原js文件。</p>
 
 <h2 id="-小型大语言模型星球">🪐 小型大语言模型星球</h2>
 
@@ -354,8 +354,9 @@ cod_dict += ['ty9kxborszstgguyd?!blm-p']
 
 <h2 id="-流式星球">🪐 流式星球</h2>
 
-<p>思路也很简单，就是根据<code class="language-plaintext highlighter-rouge">create_video.py</code>的逻辑，逆向恢复即可。
-但事实上，我一直没有搞懂如何确定视频的帧宽和帧高，不合适的宽和高会导致画面变形。我是用Mac的Preview直接手量两个bilibili logo相同部分的像素值，不过这样明显不精确，比如我量出来的宽是<code class="language-plaintext highlighter-rouge">426</code>，结果是<code class="language-plaintext highlighter-rouge">427</code>，不过从变形的画面中还是可以看出来flag的。</p>
+<p>思路也很简单，就是根据<code class="language-plaintext highlighter-rouge">create_video.py</code>的逻辑，逆向恢复即可。</p>
+
+<p>但事实上，我一直没有搞懂如何确定视频的帧宽和帧高，不合适的宽和高会导致画面变形。我是用Mac的Preview直接手量两个bilibili logo相同部分的像素值，不过这样明显不精确，比如我量出来的宽是<code class="language-plaintext highlighter-rouge">426</code>，结果是<code class="language-plaintext highlighter-rouge">427</code>，不过从变形的画面中还是可以看出来flag的。</p>
 
 <pre><code class="language-Python">import cv2
 import numpy as np
@@ -406,7 +407,7 @@ restore_video('video.bin', 'restored_video.avi', frame_count, frame_width, frame
 
 <h3 id="我的-post">我的 POST</h3>
 
-<p>研究了很久，也考虑过用<code class="language-plaintext highlighter-rouge">chunked</code>，但是失败了。最后用socket解决了。</p>
+<p>研究了很久，最后用socket解决了。</p>
 
 <pre><code class="language-Python">import socket
 
@@ -451,7 +452,7 @@ print(len(response))
 
 <h2 id="异星歧途">异星歧途</h2>
 
-<p>说实话，感觉这题对不玩Mindustry的人（比如我）很不友好。进去看了半天，甚至因为一些奇怪的原因我都点不了开关。最后决定从最后边做，也就是第四组开关。</p>
+<p>说实话，感觉这题对不玩Mindustry的人（比如我）很不友好。进去看了半天，甚至因为一些奇怪的原因我都点不了开关。最后决定从第四组开始做（后来朋友说可以去找视频看一下Mindustry逻辑入门会好一些）。</p>
 
 <p>第四组开关应该是（至少我觉得）最有逻辑的一部分，四个开关对应四个发电装置，点一点可以发现门逻辑，最后将电输送过去即可。</p>
 
@@ -459,7 +460,7 @@ print(len(response))
 
 <p>前两组我都是遍历的，值得一提的是我好像注意到第二组的最后一个开关会导致第三组开关那一部分的冷却液流失，所以相当于少遍历了一个bit。</p>
 
-<p>具体什么道理看<a href="https://github.com/USTC-Hackergame/hackergame2023-writeups/blob/master/official/%E5%BC%82%E6%98%9F%E6%AD%A7%E9%80%94/README.md">官方Writeup</a>吧，说实话对这种强依赖于非计算机知识的题目不太有好感，我也懒得看题解（如果是MC我可能会看一下，我就这么双标🤪）。</p>
+<p>具体什么道理看<a href="https://github.com/USTC-Hackergame/hackergame2023-writeups/blob/master/official/%E5%BC%82%E6%98%9F%E6%AD%A7%E9%80%94/README.md">官方Writeup</a>吧，简单看了一下，觉得如果自己知道怎么查看逻辑相关的东西的话，应该很好做出来，感觉有点依赖于游戏熟悉程度了（具体细节我就不再探索了，如果是MineCraft我可能会看一下，我就这么双标🤪）。</p>
 
   </div>
 
@@ -477,7 +478,7 @@ print(len(response))
     <p>
       
 
-&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="http://localhost:4000/feed.xml">RSS</a>
+&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="https://mirageturtle.github.io/feed.xml">RSS</a>
 
     </p>
 
