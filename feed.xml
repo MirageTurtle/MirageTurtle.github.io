@@ -5,7 +5,7 @@
   
   <link href="https://mirageturtle.github.io/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mirageturtle.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-12-04T17:54:52+08:00</updated>
+  <updated>2023-12-04T17:58:25+08:00</updated>
   <id>https://mirageturtle.github.io//</id>
 
   
@@ -119,6 +119,10 @@ services:
 &lt;p&gt;去简单Google一下可以发现，我的证书是self-signed。正好Google时发现了&lt;a href=&quot;https://github.com/acmesh-official/acme.sh/issues/4659&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;acme.sh&lt;/code&gt;的RCE&lt;/a&gt;（&lt;a href=&quot;https://www.cve.org/CVERecord?id=CVE-2023-38198&quot;&gt;CVE-2023-38198&lt;/a&gt;），于是决定参考&lt;a href=&quot;https://mindsers.blog/en/post/https-using-nginx-certbot-docker/&quot;&gt;一篇Blog&lt;/a&gt;用&lt;a href=&quot;https://certbot.eff.org/&quot;&gt;certbot&lt;/a&gt;和letsencrypt来申请证书。&lt;/p&gt;
 
 &lt;p&gt;真心感谢这篇Blog，也真心推荐，因为写的很通俗易懂且想起，包括使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--dry-run&lt;/code&gt;来check你的配置。&lt;/p&gt;
+
+&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+
+&lt;p&gt;搭好了没啥问题之后，因为最近赶S&amp;amp;P Deadline的缘故，我要去注册一下，但没想到这成了我搭好Bitwarden之后的第一次使用。希望这并不是暗示我在学术科研路上总磕磕绊绊。&lt;/p&gt;
 
 &lt;h1 id=&quot;总结&quot;&gt;总结&lt;/h1&gt;
 
