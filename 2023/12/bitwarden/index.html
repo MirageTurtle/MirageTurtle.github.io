@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>磕磕绊绊的Bitwarden</title>
+  <meta name="description" content="不是一篇可以完全 Paste and use 的博客，但一些细节可能具有普适性，希望可以帮到你。">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://mirageturtle.github.io/2023/12/bitwarden/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="MirageTurtle&#39;s blog" href="https://mirageturtle.github.io/feed.xml">
+
+  
+
+  
+  <meta property="og:title" content="磕磕绊绊的Bitwarden">
+  <meta property="og:site_name" content="MirageTurtle&#39;s blog">
+  <meta property="og:url" content="https://mirageturtle.github.io/2023/12/bitwarden/">
+  <meta property="og:description" content="不是一篇可以完全 Paste and use 的博客，但一些细节可能具有普适性，希望可以帮到你。">
+  
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="磕磕绊绊的Bitwarden">
+  <meta name="twitter:description" content="不是一篇可以完全 Paste and use 的博客，但一些细节可能具有普适性，希望可以帮到你。">
+  
+  
+
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">MirageTurtle&#39;s blog</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="https://github.com/MirageTurtle">GitHub</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">磕磕绊绊的Bitwarden</h1>
+    
+    <p class="post-meta"><time datetime="2023-12-04T16:18:00+08:00" itemprop="datePublished">Dec 4, 2023</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="密码管理器">密码管理器</h1>
+
+<p>相信很多人对密码管理器都不陌生了，尤其是在这个越来越多人重视网络安全的时代。我就直接照搬WikiPedia了：”A password manager is a computer program that allows users to store and manage their passwords for local applications or online services such as web applications, online shops or social media.”</p>
+
+<p>我其实在今年六七月份就考虑使用密码管理器了，最开始考虑的就是Bitwarden，主要原因是其可私有化部署，其他原因包括但不限于免费（1Password要付费）与支持Apple平台（KeePass及相关衍生软件尽管开源但无法支持Apple全平台）。结果在我去搭的时候发现我域名过期了，Bitwarden要求SSL/TLS，所以就放弃了。</p>
+
+<p>再次有这个念头是某天在学校某技术交流群里看到有人讨论，同时惊喜地看到他们说GitHub Student Package可以免费用1Password，我很高兴决定选择相信1Password从此过上使用密码管理器的美好生活。结果搜了发现只有第一年免费，所以决定续一下域名然后重新Bitwarden，就顺便记录一下自己部署时的磕磕绊绊吧。</p>
+
+<h1 id="曲折的bitwarden搭建">曲折的Bitwarden搭建</h1>
+
+<blockquote>
+  <p>这里按照我尝试的先后顺序记录了，需要看最后结果以及一些经验总结的可以直接跳到最后。
+不是一篇可以完全<code class="language-plaintext highlighter-rouge">Paste and use</code>的博客，但一些细节可能具有普适性，希望可以帮到你。</p>
+</blockquote>
+
+<p><del>一个插曲：续域名的时候付了钱结果可能由于Alipay在2023年11月的某些原因，导致后台没能成功拿到域名，还联系了客服帮忙解决。</del></p>
+
+<h2 id="docker肯定是要用的">Docker肯定是要用的</h2>
+
+<p>我还是习惯非系统的services或非简单脚本可以解决的services用docker来搭建，不过确实有一些弊端以及我自己能力上的不足导致的一些问题，不过自己用起来应该没啥问题。</p>
+
+<p>Docker Image是<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden/server</a>，原本叫<code class="language-plaintext highlighter-rouge">bitwarden_rs</code>，从<code class="language-plaintext highlighter-rouge">v2.21.0</code>更名。</p>
+
+<h2 id="我在学校的机器不是就很好吗">我在学校的机器不是就很好吗？</h2>
+
+<p>我在2021年9月份的时候为了打英雄联盟自己组装了一台配置特别弱的机器，结果今年在北京实习的时候买了台游戏本，这台机子也就没用了（主要配置太低也卖不掉），就直接放到办公室当Server用了。正好办公室路由器是有公网IP的，正好我的机器之前有搭过nginx（不过是为了自己做一些web vulnerability的实验，所以本地就好），直接搞个端口映射配个nginx反代不是就直接好了？甚至数据还在我能直接触摸到的一块硬盘上。于是我直接开搞。</p>
+
+<h3 id="vaultwarden">Vaultwarden</h3>
+
+<p>新建了一个文件夹<code class="language-plaintext highlighter-rouge">bitwarden</code>，然后在目录下建了子文件夹<code class="language-plaintext highlighter-rouge">bw-data</code>和<code class="language-plaintext highlighter-rouge">docker-compose.yml</code>，我就直接贴compose了：</p>
+
+<pre><code class="language-docker-compose">version: "3"
+
+services:
+  bitwarden:
+    image: vaultwarden/server
+    container_name: vaultwarden
+    restart: always
+    ports:
+        - "10080:80"
+        - "3012:3012"
+    volumes:
+      - ./bw-data:/data
+    environment:
+      WEBSOCKET_ENABLED: "true"
+      SIGNUPS_ALLOWED: "true"  # I'll change to false after I signup.
+      WEB_VAULT_ENABLED: "true"
+      ADMIN_TOKEN: "YOUR_ADMIN_TOKEN"  # I use openssl to generate this token.
+</code></pre>
+
+<p>因为也是参考网上的一些教程，但是找不到了，没有贴链接很对不起原作者。以后如果能找到我一定补！</p>
+
+<p>然后跑起来发现10080端口没什么问题，接下来就只需要搞nginx这一部分就好了。</p>
+
+<h3 id="要搞好了">要搞好了？</h3>
+
+<p>前面也提到我之前尝试搞过，但是因为SSL/TLS的原因放弃了。所以我理所当然是要给域名申请一个证书的。因为之前搞证书的时候用的<a href="https://github.com/acmesh-official/acme.sh"><code class="language-plaintext highlighter-rouge">acme.sh</code></a>和<a href="https://letsencrypt.org/"><code class="language-plaintext highlighter-rouge">letsencrypt</code></a>，这次也就还用它了。</p>
+
+<p>证书这里不太清楚是我的原因还是<code class="language-plaintext highlighter-rouge">acme.sh</code>脚本的原因，生成的是<code class="language-plaintext highlighter-rouge">csr</code>和<code class="language-plaintext highlighter-rouge">key</code>，所以我就用<code class="language-plaintext highlighter-rouge">openssl req -text -inform PEM -in example.org.csr -out example.org.pem</code>和<code class="language-plaintext highlighter-rouge">openssl x509 -req -in example.org.pem -signkey example.key -out example.org.crt</code>生成了<code class="language-plaintext highlighter-rouge">crt</code>证书。如果我没理解错的话，这一部分self-sign了证书，算是伏笔了（写博客的时候才想起来）。</p>
+
+<p>搞好证书之后配置nginx反代，这一部分参考了<a href="https://www.cnblogs.com/pomelo688/p/15959862.html">这篇博客</a>，这里感谢作者的分享。</p>
+
+<p>然后直接访问。浏览器报”网站不安全”？无所谓，继续访问！然后就看到Bitwarden的登陆界面了，注册登陆过后，发现可用。考虑到已经凌晨1点，我就去休息了。</p>
+
+<h3 id="可恶的证书和校园网">可恶的证书和校园网</h3>
+
+<p>显然还是有问题的，但我早上起来还是抱着侥幸心理在iPhone上试了一下，结果发现没办法登陆，果然证书还是有问题。</p>
+
+<p>最后考虑到未来网络环境不一定都是校园网，所以用手机热点在电脑的浏览器上试了一下，直接无法访问。简单看了一下<a href="https://lug.ustc.edu.cn/wiki/doc/ustcnet-faq/">校园网常见问题与快速自查指南</a>，发现80端口会被阻止，所以只好在我的云服务器上搭建了。</p>
+
+<h2 id="我的老破小">我的老破小</h2>
+
+<p>这台机子是我手上唯一一台云服务器了，但它应该是我一年前因为便宜买来的特别弱的一台机器（可能都找不到这么弱的机器了，因为它的优势在于网络带宽高和网络流量无限制），因为我没有续费之前的存储盘，所以它就只有10GB左右的本地存储可以用了。但我觉得反正上面也什么都没跑，应该也够用了吧？</p>
+
+<h3 id="官方有脚本好呀">官方有脚本好呀！</h3>
+
+<p>之前因为自己配置nginx反代是因为之前机器上有一个nginx了，正好配一下反代就行，现在在一个新机子上搞，这不直接用<a href="https://bitwarden.com/help/install-on-premise-linux/">官方脚本</a>？</p>
+
+<p>一路畅通无阻，最后直接<code class="language-plaintext highlighter-rouge">./bitwarden.sh start</code>，甚至都不愿意<code class="language-plaintext highlighter-rouge">docker ps</code>来检查一下，就着急浏览器访问，结果真打不开。<code class="language-plaintext highlighter-rouge">docker ps</code>一看，官方脚本配置的nginx container一直在restart，直接<code class="language-plaintext highlighter-rouge">df -s</code>发现空间满了，我直接哭了（当时可用空间就只有不到6GB的样子，但我没想到会直接占用这么大）。</p>
+
+<h3 id="从头再来">从头再来！</h3>
+
+<p>反正这机子很久没用了，我就直接重装了Debian 10（不往上装是因为内存太小了），发现Debian初始系统空间占用好像要比Ubuntu Server初始占用小上不少（这很合理）。装好之后还有不到8GB的空间，但是反正已经决定使用nginx反代的方案了，就不再尝试了，万一占用还是很多最后没什么空间然后太卡也不好。</p>
+
+<p>剩下的步骤就只有改DNS记录和修好证书了。</p>
+
+<p>去简单Google一下可以发现，我的证书是self-signed。正好Google时发现了<a href="https://github.com/acmesh-official/acme.sh/issues/4659"><code class="language-plaintext highlighter-rouge">acme.sh</code>的RCE</a>（<a href="https://www.cve.org/CVERecord?id=CVE-2023-38198">CVE-2023-38198</a>），于是决定参考<a href="https://mindsers.blog/en/post/https-using-nginx-certbot-docker/">一篇Blog</a>用<a href="https://certbot.eff.org/">certbot</a>和letsencrypt来申请证书。</p>
+
+<p>真心感谢这篇Blog，也真心推荐，因为写的很通俗易懂且想起，包括使用<code class="language-plaintext highlighter-rouge">--dry-run</code>来check你的配置。</p>
+
+<h1 id="总结">总结</h1>
+
+<h2 id="server">Server</h2>
+
+<p>因为中间简单的初始化了一个server，这里也简单记录一下。</p>
+
+<p>最开始只有root：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update
+apt upgrade
+apt <span class="nb">install sudo</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adduser testuser
+usermod <span class="nt">-aG</span> <span class="nb">sudo </span>testuser
+</code></pre></div></div>
+
+<p>然后后续就尽量用普通用户了，装了docker之后记得<code class="language-plaintext highlighter-rouge">sudo usermod -aG docker testuser</code>。</p>
+
+<p>以及<code class="language-plaintext highlighter-rouge">usermod</code>是需要重新login来生效的。</p>
+
+<h2 id="nginx">nginx</h2>
+
+<p>正如之前所说，我还是习惯用docker来跑这些，但是稍微大一点的service例如nginx配置有比较麻烦，所以我会先跑一个container，然后把初始的文件<code class="language-plaintext highlighter-rouge">docker cp</code>出来再进行配置。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /your/work/path
+docker run <span class="nt">--rm</span> <span class="nt">--name</span> tmp-nginx <span class="nt">-d</span> nginx
+docker <span class="nb">cp </span>tmp-nginx:/etc/nginx ./nginx
+docker <span class="nb">cp </span>tmp-nginx:/usr/share/nginx/html ./www
+docker <span class="nb">cp </span>tmp-nginx:/var/log/nginx ./log
+docker stop tmp-nginx
+</code></pre></div></div>
+
+<p>之后配置的时候<code class="language-plaintext highlighter-rouge">volumes</code>也就照着<code class="language-plaintext highlighter-rouge">cp</code>时的路径配就好了。</p>
+
+<h2 id="证书">证书</h2>
+
+<p>我这方面确实是新手，就简单记录一下我所遇到的坑吧：</p>
+
+<ul>
+  <li>保证80端口可以被challenge
+    <ul>
+      <li>standalone或类似模式可能需要额外设置来保证80端口</li>
+    </ul>
+  </li>
+  <li>保证网页目录可写保证challenge</li>
+</ul>
+
+
+  </div>
+
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="https://mirageturtle.github.io/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
