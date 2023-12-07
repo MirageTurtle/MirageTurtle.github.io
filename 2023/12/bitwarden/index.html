@@ -169,9 +169,15 @@ services:
 
 <p>真心感谢这篇Blog，也真心推荐，因为写的很通俗易懂且想起，包括使用<code class="language-plaintext highlighter-rouge">--dry-run</code>来check你的配置。</p>
 
+<h3 id="数据备份">数据备份</h3>
+
+<p>为了满足之前”将数据存在我可以触摸到的一块硬盘上”的想法，我添加了一个<code class="language-plaintext highlighter-rouge">cronjob</code>每天凌晨来<code class="language-plaintext highlighter-rouge">rsync</code>数据。</p>
+
 <h2 id="最后">最后</h2>
 
 <p>搭好了没啥问题之后，因为最近赶S&amp;P Deadline的缘故，我要去注册一下，但没想到这成了我搭好Bitwarden之后的第一次使用。希望这并不是暗示我在学术科研路上总磕磕绊绊。</p>
+
+<p>跟taoky聊了聊，其实完全可以Bitwarden搭建在学校的机器上，然后域名解析到我的云服务器上，最后tunnel回学校服务器即可，毕竟也只是封了80、443等常用的敏感接口，需要的话证书直接用DNS Challenge就行（我当时倒确实忘了可以DNS Challenge）。</p>
 
 <h1 id="总结">总结</h1>
 

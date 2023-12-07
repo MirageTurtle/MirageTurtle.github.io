@@ -5,7 +5,7 @@
   
   <link href="https://mirageturtle.github.io/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://mirageturtle.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-12-04T17:58:25+08:00</updated>
+  <updated>2023-12-07T17:41:26+08:00</updated>
   <id>https://mirageturtle.github.io//</id>
 
   
@@ -120,9 +120,15 @@ services:
 
 &lt;p&gt;真心感谢这篇Blog，也真心推荐，因为写的很通俗易懂且想起，包括使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--dry-run&lt;/code&gt;来check你的配置。&lt;/p&gt;
 
+&lt;h3 id=&quot;数据备份&quot;&gt;数据备份&lt;/h3&gt;
+
+&lt;p&gt;为了满足之前”将数据存在我可以触摸到的一块硬盘上”的想法，我添加了一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cronjob&lt;/code&gt;每天凌晨来&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rsync&lt;/code&gt;数据。&lt;/p&gt;
+
 &lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
 
 &lt;p&gt;搭好了没啥问题之后，因为最近赶S&amp;amp;P Deadline的缘故，我要去注册一下，但没想到这成了我搭好Bitwarden之后的第一次使用。希望这并不是暗示我在学术科研路上总磕磕绊绊。&lt;/p&gt;
+
+&lt;p&gt;跟taoky聊了聊，其实完全可以Bitwarden搭建在学校的机器上，然后域名解析到我的云服务器上，最后tunnel回学校服务器即可，毕竟也只是封了80、443等常用的敏感接口，需要的话证书直接用DNS Challenge就行（我当时倒确实忘了可以DNS Challenge）。&lt;/p&gt;
 
 &lt;h1 id=&quot;总结&quot;&gt;总结&lt;/h1&gt;
 
