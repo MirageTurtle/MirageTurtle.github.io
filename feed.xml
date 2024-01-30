@@ -3,10 +3,10 @@
   <generator uri="http://jekyllrb.com" version="4.3.2">Jekyll</generator>
   
   
-  <link href="https://mirageturtle.github.io/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://mirageturtle.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-12-07T17:41:26+08:00</updated>
-  <id>https://mirageturtle.github.io//</id>
+  <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2024-01-30T09:43:13+08:00</updated>
+  <id>http://localhost:4000//</id>
 
   
     <title type="html">MirageTurtle’s blog</title>
@@ -25,12 +25,12 @@
       <title type="html">磕磕绊绊的Bitwarden</title>
       
       
-      <link href="https://mirageturtle.github.io/2023/12/bitwarden/" rel="alternate" type="text/html" title="磕磕绊绊的Bitwarden" />
+      <link href="http://localhost:4000/2023/12/bitwarden/" rel="alternate" type="text/html" title="磕磕绊绊的Bitwarden" />
       
       <published>2023-12-04T16:18:00+08:00</published>
       <updated>2023-12-04T16:18:00+08:00</updated>
-      <id>https://mirageturtle.github.io/2023/12/bitwarden</id>
-      <content type="html" xml:base="https://mirageturtle.github.io/2023/12/bitwarden/">&lt;h1 id=&quot;密码管理器&quot;&gt;密码管理器&lt;/h1&gt;
+      <id>http://localhost:4000/2023/12/bitwarden</id>
+      <content type="html" xml:base="http://localhost:4000/2023/12/bitwarden/">&lt;h1 id=&quot;密码管理器&quot;&gt;密码管理器&lt;/h1&gt;
 
 &lt;p&gt;相信很多人对密码管理器都不陌生了，尤其是在这个越来越多人重视网络安全的时代。我就直接照搬WikiPedia了：”A password manager is a computer program that allows users to store and manage their passwords for local applications or online services such as web applications, online shops or social media.”&lt;/p&gt;
 
@@ -205,12 +205,12 @@ docker stop tmp-nginx
       <title type="html">HackerGame 2023 Writeup</title>
       
       
-      <link href="https://mirageturtle.github.io/2023/11/hackergame-2023-writeup/" rel="alternate" type="text/html" title="HackerGame 2023 Writeup" />
+      <link href="http://localhost:4000/2023/11/hackergame-2023-writeup/" rel="alternate" type="text/html" title="HackerGame 2023 Writeup" />
       
       <published>2023-11-05T11:30:00+08:00</published>
       <updated>2023-11-05T11:30:00+08:00</updated>
-      <id>https://mirageturtle.github.io/2023/11/hackergame-2023-writeup</id>
-      <content type="html" xml:base="https://mirageturtle.github.io/2023/11/hackergame-2023-writeup/">&lt;h1 id=&quot;0x00-overview&quot;&gt;0x00 Overview&lt;/h1&gt;
+      <id>http://localhost:4000/2023/11/hackergame-2023-writeup</id>
+      <content type="html" xml:base="http://localhost:4000/2023/11/hackergame-2023-writeup/">&lt;h1 id=&quot;0x00-overview&quot;&gt;0x00 Overview&lt;/h1&gt;
 
 &lt;p&gt;今年的成绩还挺不错的，对于我这样一个不怎么接触CTF的新手（尽管已经接触HackerGame两年了）来说。&lt;/p&gt;
 
@@ -614,12 +614,12 @@ print(len(response))
       <title type="html">我的比赛经历</title>
       
       
-      <link href="https://mirageturtle.github.io/2022/03/competition/" rel="alternate" type="text/html" title="我的比赛经历" />
+      <link href="http://localhost:4000/2022/03/competition/" rel="alternate" type="text/html" title="我的比赛经历" />
       
       <published>2022-03-06T15:12:00+08:00</published>
       <updated>2022-03-06T15:12:00+08:00</updated>
-      <id>https://mirageturtle.github.io/2022/03/competition</id>
-      <content type="html" xml:base="https://mirageturtle.github.io/2022/03/competition/">&lt;blockquote&gt;
+      <id>http://localhost:4000/2022/03/competition</id>
+      <content type="html" xml:base="http://localhost:4000/2022/03/competition/">&lt;blockquote&gt;
   &lt;p&gt;先写大学以来的吧，中学也没有什么经历，有也记不得了。
 比赛记录的不算特别详细，可能有的比赛会专门写博文去记录。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -709,12 +709,12 @@ print(len(response))
       <title type="html">Hello World</title>
       
       
-      <link href="https://mirageturtle.github.io/2021/10/hello-world/" rel="alternate" type="text/html" title="Hello World" />
+      <link href="http://localhost:4000/2021/10/hello-world/" rel="alternate" type="text/html" title="Hello World" />
       
       <published>2021-10-27T19:14:00+08:00</published>
       <updated>2021-10-27T19:14:00+08:00</updated>
-      <id>https://mirageturtle.github.io/2021/10/hello-world</id>
-      <content type="html" xml:base="https://mirageturtle.github.io/2021/10/hello-world/">&lt;p&gt;2021年10月27日13时10分左右，一个不知天高地厚的傻小子在他的宿舍和某高中好友群，扬言要在二十岁之前搭出自己的博客。&lt;/p&gt;
+      <id>http://localhost:4000/2021/10/hello-world</id>
+      <content type="html" xml:base="http://localhost:4000/2021/10/hello-world/">&lt;p&gt;2021年10月27日13时10分左右，一个不知天高地厚的傻小子在他的宿舍和某高中好友群，扬言要在二十岁之前搭出自己的博客。&lt;/p&gt;
 
 &lt;p&gt;他曾经尝试写一个博客网站，不过因为他太笨了，不是很会使用Jekyll，最后就用他那一点点浅显得不能再浅显的html知识，写了一个没有背景的主页，几篇只有文字的博文，最后还迫于期末考试压力放弃了。&lt;/p&gt;
 
